@@ -1,0 +1,217 @@
+@import 'custom-style/colors';
+@import 'custom-style/spacing';
+@import 'custom-style/shared-styles';
+@import 'custom-style/typography';
+@import 'custom-style/icons';
+@import 'custom-style/buttons';
+@import 'custom-style/forms';
+
+
+/* --------------------------------
+
+File#: _1_hero
+Title: Hero
+Descr: A full-width callout section
+Usage: codyhouse.co/license
+
+-------------------------------- */
+
+.hero {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-bg);
+    min-height: 380px;
+    // if bg = img
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @include breakpoint(md) {
+        min-height: 540px;
+    }
+}
+
+.hero__content {}
+
+.hero__label {
+    color: alpha(var(--color-contrast-high), 0.6);
+    font-size: var(--text-sm);
+}
+
+// --overlay-layer
+.hero--overlay-layer {
+    position: relative;
+
+    .hero__content {
+        position: relative;
+        z-index: 2;
+    }
+
+    &::after {
+        // add a layer in between the img/video background and the content
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: alpha(var(--color-bg), 0.65);
+        z-index: 1;
+    }
+}
+
+// --full-screen
+.hero--full-screen {
+    height: 100vh;
+}
+
+/* --------------------------------
+
+File#: _1_hero
+Title: Hero
+Descr: A full-width callout section
+Usage: codyhouse.co/license
+
+-------------------------------- */
+
+.hero {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-bg);
+    min-height: 380px;
+    // if bg = img
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @include breakpoint(md) {
+        min-height: 540px;
+    }
+}
+
+.hero__content {}
+
+.hero__label {
+    color: alpha(var(--color-contrast-high), 0.6);
+    font-size: var(--text-sm);
+}
+
+// --overlay-layer
+.hero--overlay-layer {
+    position: relative;
+
+    .hero__content {
+        position: relative;
+        z-index: 2;
+    }
+
+    &::after {
+        // add a layer in between the img/video background and the content
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: alpha(var(--color-bg), 0.65);
+        z-index: 1;
+    }
+}
+
+// --full-screen
+.hero--full-screen {
+    height: 100vh;
+}
+
+/* --------------------------------
+ File#: _1_video-background
+ Title: Responsive Video Background
+ Descr: A full-width responsive video background
+ Usage: codyhouse.co/license
+ -------------------------------- */
+
+.video-bg {
+    position: relative;
+    height: 100vh;
+}
+
+.video-bg__content {
+    position: relative;
+    z-index: 2;
+}
+
+.video-bg__media {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.video-bg__media video {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    min-height: 100%;
+    min-width: 100%;
+    height: auto;
+    width: auto;
+    max-width: none;
+}
+
+@supports (object-fit: cover) {
+    .video-bg__media video {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@supports (object-fit: cover) and (-ms-ime-align:auto) {
+    .video-bg__media video {
+        height: auto;
+        width: auto;
+    }
+}
+
+.video-bg__media img {
+    display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .video-bg__media video {
+        visibility: hidden;
+    }
+
+    .video-bg__media img {
+        display: block;
+        position: absolute;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+
+
+/* --------------------------------
+
+CUSTOM CSS
+
+-------------------------------- */
+body {
+    background-color: #fefefe;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.184 20c.357-.13.72-.264 1.088-.402l1.768-.661C33.64 15.347 39.647 14 50 14c10.271 0 15.362 1.222 24.629 4.928.955.383 1.869.74 2.75 1.072h6.225c-2.51-.73-5.139-1.691-8.233-2.928C65.888 13.278 60.562 12 50 12c-10.626 0-16.855 1.397-26.66 5.063l-1.767.662c-2.475.923-4.66 1.674-6.724 2.275h6.335zm0-20C13.258 2.892 8.077 4 0 4V2c5.744 0 9.951-.574 14.85-2h6.334zM77.38 0C85.239 2.966 90.502 4 100 4V2c-6.842 0-11.386-.542-16.396-2h-6.225zM0 14c8.44 0 13.718-1.21 22.272-4.402l1.768-.661C33.64 5.347 39.647 4 50 4c10.271 0 15.362 1.222 24.629 4.928C84.112 12.722 89.438 14 100 14v-2c-10.271 0-15.362-1.222-24.629-4.928C65.888 3.278 60.562 2 50 2 39.374 2 33.145 3.397 23.34 7.063l-1.767.662C13.223 10.84 8.163 12 0 12v2z' fill='%23d9d9d9' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.color-overlayx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+
+}
