@@ -7,11 +7,14 @@
 :root {
   --form-control-padding-x: var(--space-sm);
   --form-control-padding-y: var(--space-xs);
-  --form-control-radius: 0.25em;
+  --form-control-radius: 0em;
 }
 
-.form-control { // basic form element style
+.form-control {
+  // basic form element style
   border: 2px solid var(--color-contrast-low);
+  font-size: var(--text-lg);
+  border: solid 1px black;
 
   &:focus {
     outline: none;
@@ -28,14 +31,15 @@
   }
 }
 
-.form-control[disabled], .form-control[readonly] {
+.form-control[disabled],
+.form-control[readonly] {
   cursor: not-allowed;
 }
 
 .form-legend {}
 
 .form-label {
-  font-size: var(--text-sm);
+  font-size: var(--text-md);
 }
 
 // --------------------------------

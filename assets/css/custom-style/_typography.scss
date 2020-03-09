@@ -6,13 +6,15 @@
 
 :root {
   // font family
-  --font-primary: sans-serif;
+  --font-primary: 'Open Sans Condensed', sans-serif 700;
+
+
 
   // body font size
   --text-base-size: 1em;
-  
+
   // type scale
-  --text-scale-ratio: 1.2;
+  --text-scale-ratio: 1.8;
   --text-xs: calc((1em / var(--text-scale-ratio)) / var(--text-scale-ratio));
   --text-sm: calc(var(--text-xs) * var(--text-scale-ratio));
   --text-md: calc(var(--text-sm) * var(--text-scale-ratio) * var(--text-scale-ratio));
@@ -45,7 +47,8 @@
 // --------------------------------
 
 // link style
-a, .link {}
+a,
+.link {}
 
 mark {
   background-color: alpha(var(--color-accent), 0.2);
@@ -72,7 +75,8 @@ mark {
   }
 }
 
-.article { // e.g., blog posts
+.article {
+  // e.g., blog posts
   --body-line-height: 1.58; // set body line-height
-  --text-vspace-multiplier: 1.2; // increase vertical spacing
+  --text-vspace-multiplier: 1.2; // 1.2 increase vertical spacing
 }
