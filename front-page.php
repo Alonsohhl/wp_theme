@@ -14,7 +14,6 @@
     <div class="hero__content text-center">
       <div class="hero__label margin-bottom-xxs">
         <object type="image/svg+xml"  class="svg_logo" data="<?php echo get_stylesheet_directory_uri(); ?>/assets/svg/Logo.svg" alt="logo" style="width:600px" ></object>
-        <!-- <img class="svg_logo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/svg/Logo.svg" alt="Kiwi standing on oval" style="width:600px"> -->
       </div>
     </div>
   </div>
@@ -22,10 +21,6 @@
 
 </section>
 <!-- Image Gallery -->
-<?php $Image1 = get_field('Image1');?>
-<?php if ($Image1) {?>
-	<img src="<?php echo $Image1['url']; ?>" alt="<?php echo $Image1['alt']; ?>" />
-<?php }?>
 
 <section class="products-gallery padding-y-xxl" >
   <div class="container max-width-adaptive-lg">
@@ -37,7 +32,11 @@
 
         <a href="#0" class="prod-card__img-link photo1" aria-label="Description of the link">
           <figure class="prod-card__img photoframe" >
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/imgTest1.jpg" alt="Product preview image">
+          <?php $Image1 = get_field('Image1');?>
+          <?php if ($Image1) {?>
+            <img src="<?php echo $Image1['url']; ?>" alt="<?php echo $Image1['alt']; ?>" />
+          <?php }?>
+
 
           </figure>
         </a>
@@ -50,7 +49,10 @@
 
         <a href="#0" class="prod-card__img-link photo2" aria-label="Description of the link">
           <figure class="prod-card__img photoframe ">
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/imgTest2.jpg" alt="Product preview image">
+          <?php $Image2 = get_field('Image2');?>
+          <?php if ($Image2) {?>
+            <img src="<?php echo $Image2['url']; ?>" alt="<?php echo $Image2['alt']; ?>" />
+          <?php }?>
           </figure>
         </a>
 
@@ -61,7 +63,10 @@
       <div class="prod-card col-3@md  col-6@xs">
         <a href="#0" class="prod-card__img-link photo3" aria-label="Description of the link">
           <figure class="prod-card__img photoframe" >
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/imgTest3.jpg" alt="Product preview image">
+          <?php $Image3 = get_field('Image3');?>
+          <?php if ($Image3) {?>
+            <img src="<?php echo $Image3['url']; ?>" alt="<?php echo $Image3['alt']; ?>" />
+          <?php }?>
           </figure>
         </a>
 
@@ -71,7 +76,10 @@
       <div class="prod-card col-3@md  col-6@xs">
         <a href="#0" class="prod-card__img-link photo4" aria-label="Description of the link">
           <figure class="prod-card__img photoframe" >
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/imgTest4.jpg" alt="Product preview image">
+          <?php $Image4 = get_field('Image4');?>
+          <?php if ($Image4) {?>
+            <img src="<?php echo $Image4['url']; ?>" alt="<?php echo $Image4['alt']; ?>" />
+          <?php }?>
           </figure>
         </a>
 
@@ -83,28 +91,35 @@
   </div>
 </section>
 
-
+<!-- Article  -->
 <div class="container">
 
 
-<article class="article text-component">
-  <h1>THE STRAIT AND NARROW BRAND AMBASSADOR</h1>
-  <h2>#VAN LIFE DREAM JOB</h2>
+          <article class="article text-component">
+               <h1>THE STRAIT AND NARROW BRAND AMBASSADOR</h1>
+               <h2>#VAN LIFE DREAM JOB</h2>
 
-  <p class="text-md ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum orci elit, in accumsan justo convallis ut. Donec consectetur ultricies lectus id aliquet. Etiam dictum rhoncus libero, non vestibulum neque mattis sollicitudin. Nam pulvinar, diam vel pretium ornare, mauris tortor tristique neque, id bibendum augue ex a lorem. Donec ornare pulvinar lectus. Praesent a est molestie, pellentesque neque non, ullamcorper orci. Duis egestas ipsum eget lorem fringilla, quis ornare nunc laoreet. Suspendisse auctor mi non tempor pellentesque. Donec condimentum lorem dignissim odio lobortis hendrerit non id lorem. Mauris et mauris diam. Vivamus quam enim, faucibus non imperdiet sit amet, scelerisque id dolor. Suspendisse pellentesque rutrum dui, sit amet malesuada arcu egestas in. Aliquam et ligula erat.
-  <a href="#">
-   <h2>Job Details <i class="material-icons" style='text-decoration: none;'>file_download</i></h1>
-  </a>
+               <p class="text-md ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum orci elit, in
+                    accumsan justo convallis ut. Donec consectetur ultricies lectus id aliquet. Etiam dictum rhoncus
+                    libero, non vestibulum neque mattis sollicitudin. Nam pulvinar, diam vel pretium ornare, mauris
+                    tortor tristique neque, id bibendum augue ex a lorem. Donec ornare pulvinar lectus. Praesent a est
+                    molestie, pellentesque neque non, ullamcorper orci. Duis egestas ipsum eget lorem fringilla, quis
+                    ornare nunc laoreet. Suspendisse auctor mi non tempor pellentesque. Donec condimentum lorem
+                    dignissim odio lobortis hendrerit non id lorem. Mauris et mauris diam. Vivamus quam enim, faucibus
+                    non imperdiet sit amet, scelerisque id dolor. Suspendisse pellentesque rutrum dui, sit amet
+                    malesuada arcu egestas in. Aliquam et ligula erat.
+                    <a href="#">
+                         <h2>Job Details <i class="material-icons" style='text-decoration: none;'>file_download</i></h1>
+                    </a>
 
-</p>
+               </p>
 
 
-</article>
-</div>
+          </article>
+     </div>
 
 
-
-
+<!-- FORM  -->
 
 <div class="container">
           <form class="padding-y-xxl" data-aos="fade-up">
