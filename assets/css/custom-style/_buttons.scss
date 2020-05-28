@@ -9,24 +9,14 @@
   --btn-font-size-sm: calc(var(--btn-font-size) - 0.2em);
   --btn-font-size-md: calc(var(--btn-font-size) + 0.2em);
   --btn-font-size-lg: calc(var(--btn-font-size) + 0.4em);
-  --btn-padding-x: var(--space-lg); // padding left + right
-  --btn-padding-y: var(--space-sm); // padding top + bottom
+  --btn-padding-x: var(--space-sm); // padding left + right
+  --btn-padding-y: var(--space-xs); // padding top + bottom
   --btn-radius: 0.25em;
 }
 
-.btn {
-  // basic button style
+.btn { // basic button style
   box-shadow: 0 4px 16px alpha(var(--color-black), 0.15);
   cursor: pointer;
-  font-size: x-large;
-  background-color: black;
-  border-radius: 0;
-
-
-  &:hover {
-    color: red;
-  }
-
 }
 
 // themes
@@ -48,9 +38,7 @@
 
 // sizes
 .btn--sm {}
-
 .btn--md {}
-
 .btn--lg {}
 
 // --------------------------------

@@ -26,7 +26,7 @@ function reload(done) {
   done();
 }
 
-gulp.task("sass", function() {
+gulp.task("sass", function () {
   return gulp
     .src(scssFilesPath)
     .pipe(sassGlob())
@@ -36,7 +36,7 @@ gulp.task("sass", function() {
     .pipe(
       browserSync.reload({
         stream: true,
-        notify: false
+        notify: false,
       })
     );
   // if you need to support IE11 and below:
@@ -47,7 +47,7 @@ gulp.task("sass", function() {
   // .pipe(gulp.dest(cssFolder));
 });
 
-gulp.task("scripts", function() {
+gulp.task("scripts", function () {
   return gulp
     .src([utilJsPath + "/util.js", componentsJsPath])
     .pipe(concat("scripts.js"))
@@ -58,18 +58,21 @@ gulp.task("scripts", function() {
     .pipe(
       browserSync.reload({
         stream: true,
-        notify: false
+        notify: false,
       })
     );
 });
 
 gulp.task(
   "watch",
-  gulp.series(["sass", "scripts"], function() {
-    connect.server({}, function() {
+  gulp.series(["sass", "scripts"], function () {
+    connect.server({}, function () {
       browserSync({
-        proxy: "localhost:8888/" + themeName,
-        notify: false
+        // proxy: "localhost:8888/" + themeName,
+        // proxy: "localhost:80/" + "wordpress",
+        proxy: "http://localhost/wordpress/",
+
+        notify: true,
       });
     });
     gulp.watch("**/*.php", gulp.series(reload));

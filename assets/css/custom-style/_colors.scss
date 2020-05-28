@@ -4,11 +4,12 @@
 
 // --------------------------------
 
-:root, [data-theme="default"] {
+:root,
+[data-theme="default"] {
   // main
   @include defineColorHSL(--color-primary-darker, 220, 90%, 36%);
   @include defineColorHSL(--color-primary-dark, 220, 90%, 46%);
-  @include defineColorHSL(--color-primary, 220, 90%, 56%);
+  @include defineColorHSL(--color-primary, 0, 0%, 0%);
   @include defineColorHSL(--color-primary-light, 220, 90%, 66%);
   @include defineColorHSL(--color-primary-lighter, 220, 90%, 76%);
 
