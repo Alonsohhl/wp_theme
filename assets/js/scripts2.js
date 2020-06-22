@@ -9,7 +9,6 @@ function displayResponsive() {
 
 (function ($) {
   "use strict";
-
   $(document).ready(function () {
     var win_h = $(window).height(),
       win_w = $(window).width(),
@@ -269,7 +268,7 @@ function displayResponsive() {
           extra_amount_right =
             win_w / 2 - (last_img.width() / 2 + container_margin);
 
-        total_width += extra_amount_left + extra_amount_right;
+        total_width += extra_amount_left + extra_amount_right + 300;
 
         $(".gallery-h .container").width(total_width);
 
@@ -1916,3 +1915,26 @@ function displayResponsive() {
     }
   });
 })(jQuery);
+
+// File#: _1_google-maps
+// Usage: codyhouse.co/license
+function initGoogleMap() {
+  var contactMap = document.getElementsByClassName("js-google-maps");
+  if (contactMap.length > 0) {
+    for (var i = 0; i < contactMap.length; i++) {
+      initContactMap(contactMap[i]);
+    }
+  }
+}
+
+function initContactMap(wrapper) {
+  var coordinate = wrapper.getAttribute("data-coordinates").split(",");
+  var map = new google.maps.Map(wrapper, {
+    zoom: 10,
+    center: { lat: Number(coordinate[0]), lng: Number(coordinate[1]) },
+  });
+  var marker = new google.maps.Marker({
+    position: { lat: Number(coordinate[0]), lng: Number(coordinate[1]) },
+    map: map,
+  });
+}

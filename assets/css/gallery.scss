@@ -10,14 +10,13 @@ Usage: codyhouse.co/license
 
 -------------------------------- */
 
-.details-list {
-}
+.details-list {}
 
 .details-list__item {
   padding: var(--space-md) 0;
   border-bottom: 1px solid var(--color-contrast-low);
 
-  > * {
+  >* {
     margin-bottom: var(--space-xxs); // vertical spacing
   }
 
@@ -45,7 +44,7 @@ Usage: codyhouse.co/license
       justify-content: space-between;
       align-items: baseline;
 
-      > * {
+      >* {
         margin-bottom: 0;
       }
     }
@@ -72,6 +71,7 @@ Usage: codyhouse.co/license
     }
   }
 }
+
 // --End DETAIL LIST
 
 $ease: all 0.3s ease-in-out;
@@ -89,6 +89,7 @@ Usage: codyhouse.co/license
   grid-column: 1 / 4;
   grid-row: 1 / 7;
 }
+
 .adv-gallery {
   margin-top: 5%;
   position: relative;
@@ -112,6 +113,7 @@ Usage: codyhouse.co/license
       -webkit-transition: 0.3s ease-in-out;
       transition: 0.3s ease-in-out;
     }
+
     &:hover::before {
       opacity: 0;
     }
@@ -131,6 +133,7 @@ Usage: codyhouse.co/license
   // -moz-filter: grayscale(50%);
   // -o-filter: grayscale(50%);
 }
+
 .adv-gallery__img:hover {
   // -webkit-transform: scale(1.1);
   // transform: scale(1.1);
@@ -140,11 +143,12 @@ Usage: codyhouse.co/license
 
 // CSS Grid fallback
 .adv-gallery__grid {
-  > * {
+  >* {
     margin-bottom: var(--space-md);
   }
 
   @include breakpoint(md) {
+
     > :nth-child(1),
     > :nth-child(2),
     > :nth-child(3) {
@@ -169,7 +173,7 @@ Usage: codyhouse.co/license
     display: grid;
     grid-gap: var(--space-md);
 
-    > * {
+    >* {
       // fallback reset
       margin: 0 !important;
       width: auto !important;
@@ -243,6 +247,7 @@ Usage: codyhouse.co/license
   // vertical-align: middle;
   // align-items: center;
   height: 50vh;
+
   .image {
     height: 100%;
     width: 100%;
@@ -267,6 +272,7 @@ Usage: codyhouse.co/license
         font-size: calc(50px + 6 * ((100vw - 320px) / 680));
         font-family: "Muli", sans-serif;
       }
+
       // line-height: 50vh;
       // text-align: left;
       // display: inline;
@@ -287,6 +293,7 @@ Usage: codyhouse.co/license
         }
       }
     }
+
     @media only screen and (max-device-width: 680px) {
       & {
         background-attachment: scroll;
@@ -307,6 +314,7 @@ Usage: codyhouse.co/license
 .contact {
   position: relative;
   z-index: 1;
+  margin-bottom: 5vh;
 
   .details-list {
     margin-bottom: var(--space-lg);
@@ -332,4 +340,28 @@ Usage: codyhouse.co/license
       grid-gap: var(--space-lg);
     }
   }
+}
+
+
+/* --------------------------------
+
+File#: _1_google-maps
+Title: Google Maps
+Descr: Google Maps component
+Usage: codyhouse.co/license
+
+-------------------------------- */
+
+.google-maps {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; // set 16:9 aspect ratio
+}
+
+.google-maps--ratio-4\:1 {
+  padding-bottom: 25%;
+}
+
+.google-maps--ratio-3\:1 {
+  padding-bottom: 33%;
 }

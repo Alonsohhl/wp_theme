@@ -3,6 +3,7 @@
 .web-topnav {
   overflow: hidden;
   background-color: #333;
+
   a {
     float: left;
     display: block;
@@ -16,18 +17,22 @@
       background-color: #ddd;
       color: black;
     }
+
     &.active {
       background-color: #4caf50;
       color: white;
     }
   }
+
   .mobile-menu-burger {
     display: none;
   }
+
   @media screen and (max-width: 600px) {
     & a:not(:first-child).menu-option {
       display: none;
     }
+
     & a.icon {
       float: right;
       display: block;
@@ -36,11 +41,13 @@
     &.responsive {
       position: relative;
     }
+
     &.responsive .icon {
       position: absolute;
       right: 0;
       top: 0;
     }
+
     &.responsive a {
       float: none;
       display: block;
@@ -62,11 +69,13 @@
     flex-basis: 21%;
   }
 }
+
 $breakpoint-tablet: 1100px;
 
 header.head {
   margin-bottom: 10px;
-  overflow: visible !important  ;
+  overflow: visible !important;
+
   .logo-container {
     .comp-title {
       .main-title {
@@ -121,15 +130,18 @@ header .mobile-menu-burger {
 header {
   @media (max-width: $breakpoint-tablet) {
     margin-bottom: 0px !important;
+
     .logo-container {
       .comp-title {
         .main-title {
           display: inline-block;
+
           p {
             font-size: 11px;
             line-height: 11px;
           }
         }
+
         .alt-title {
           display: none;
         }

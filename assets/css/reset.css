@@ -11,6 +11,7 @@ body {
   -webkit-text-size-adjust: 100%;
   text-rendering: optimizelegibility;
 }
+
 a,
 abbr,
 acronym,
@@ -109,9 +110,11 @@ video {
   outline: 0;
   background: transparent;
 }
+
 strong {
   font-weight: bold;
 }
+
 article,
 aside,
 details,
@@ -125,63 +128,79 @@ nav,
 section {
   display: block;
 }
+
 a {
   text-decoration: none;
 }
+
 ol,
 ul,
 li {
   list-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
 }
+
 input {
   outline: 0;
   margin: 0;
   padding: 0;
 }
+
 :focus {
   outline: 0;
 }
+
 textarea {
   resize: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
 img {
   -ms-interpolation-mode: bicubic;
   vertical-align: middle;
   max-width: 100%;
+  object-fit: cover;
 }
+
 input[type="submit"] {
   cursor: pointer;
   font: inherit;
 }
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 iframe {
   width: 100%;
   height: 54%;
 }
+
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   color: #bdbdbd;
 }
+
 input:-moz-placeholder,
 textarea:-moz-placeholder {
   color: #bdbdbd;
 }
+
 input::-moz-placeholder,
 textarea::-moz-placeholder {
   color: #bdbdbd;
 }
+
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
   color: #bdbdbd;

@@ -1,83 +1,152 @@
 <?php get_header();?>
 
+<?php
+$args = array('post_type' => 'gallery_image');
+query_posts($args);
+?>
 
 
-    <!-- Begin Content -->
-    <div class="main-container with-padding">
 
-        <!-- Begin Wrapper -->
-        <div class="wrapper">
 
-            <!-- Begin Horizontal Gallery -->
-            <div class="gallery-h centered">
+<!-- Begin Content -->
+<div class="main-container with-padding">
 
-                <div class="nav">
-                    <a href="#" class="prev icon4-leftarrow23"></a>
-                    <a href="#" class="next icon4-chevrons"></a>
-                </div>
+    <!-- Begin Wrapper -->
+    <div class="wrapper">
 
-                <div class="gallery clearfix">
+        <!-- Begin Horizontal Gallery -->
+        <div class="gallery-h centered">
 
-                    <div class="container">
+            <div class="nav">
+                <a href="#" class="prev icon4-leftarrow23"></a>
+                <a href="#" class="next icon4-chevrons"></a>
+            </div>
 
-                        <div class="img">
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/gallery/g5_1.jpg" rel="gallery">
-                                <img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/gallery/g5_1.jpg" alt="" data-width="1365" data-height="2048">
-                            </a>
-                        </div>
+            <div class="gallery clearfix">
 
-                        <div class="img">
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/gallery/g5_2.jpg" rel="gallery">
-                                <img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/gallery/g5_2.jpg" alt="" data-width="600" data-height="800">
-                            </a>
-                        </div>
+                <div class="container" id="container">
 
-                        <div class="img active">
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/gallery/g5_3.jpg" rel="gallery">
-                                <img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/gallery/g5_3.jpg" alt="" data-width="1365" data-height="2048">
-                            </a>
-                        </div>
+                    <?php $galleryimg1 = get_field('galleryimg1');?>
+                    <?php if ($galleryimg1): ?>
 
-                        <div class="img">
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/gallery/g5_4.jpg" rel="gallery">
-                                <img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/gallery/g5_4.jpg" alt="" data-width="1365" data-height="2048">
-                            </a>
-                        </div>
+                    <div class="img">
+                        <a href="<?php echo esc_url($galleryimg1['url']); ?>" rel="gallery">
+                            <img class="lazy" data-original="<?php echo esc_url($galleryimg1['url']); ?>"
+                                alt="<?php echo esc_attr($galleryimg1['alt']); ?>" data-width="600" data-height="800" />
 
-                        <div class="img">
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/gallery/g5_5.jpg" rel="gallery">
-                                <img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/gallery/g5_5.jpg" alt="" data-width="1365" data-height="2048">
-                            </a>
-                        </div>
-
-                        <div class="img">
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/gallery/g5_6.jpg" rel="gallery">
-                                <img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/gallery/g5_6.jpg" alt="" data-width="2048" data-height="1581">
-                            </a>
-                        </div>
-
-                        <div class="img">
-                            <a href="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/gallery/g5_7.jpg" rel="gallery">
-                                <img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/gallery/g5_7.jpg" alt="" data-width="1920" data-height="1280">
-                            </a>
-                        </div>
-
+                        </a>
                     </div>
+                    <?php endif;?>
+
+                    <?php $galleryimg2 = get_field('galleryimg2');?>
+                    <?php if ($galleryimg2): ?>
+
+                    <div class="img">
+                        <a href="<?php echo esc_url($galleryimg2['url']); ?>" rel="gallery">
+                            <img class="lazy" data-original="<?php echo esc_url($galleryimg2['url']); ?>"
+                                alt="<?php echo esc_attr($galleryimg2['alt']); ?>" data-width="600" data-height="800" />
+
+                        </a>
+                    </div>
+                    <?php endif;?>
+                    <?php $galleryimg3 = get_field('galleryimg3');?>
+                    <?php if ($galleryimg3): ?>
+
+                    <div class="img active">
+                        <a href="<?php echo esc_url($galleryimg3['url']); ?>" rel="gallery">
+                            <img class="lazy" data-original="<?php echo esc_url($galleryimg3['url']); ?>"
+                                alt="<?php echo esc_attr($galleryimg3['alt']); ?>" data-width="600" data-height="800" />
+
+                        </a>
+                    </div>
+                    <?php endif;?>
+                    <?php $galleryimg4 = get_field('galleryimg4');?>
+                    <?php if ($galleryimg4): ?>
+
+                    <div class="img">
+                        <a href="<?php echo esc_url($galleryimg4['url']); ?>" rel="gallery">
+                            <img class="lazy" data-original="<?php echo esc_url($galleryimg4['url']); ?>"
+                                alt="<?php echo esc_attr($galleryimg4['alt']); ?>" data-width="600" data-height="800" />
+
+                        </a>
+                    </div>
+                    <?php endif;?>
+                    <?php $galleryimg5 = get_field('galleryimg5');?>
+                    <?php if ($galleryimg5): ?>
+
+                    <div class="img">
+                        <a href="<?php echo esc_url($galleryimg5['url']); ?>" rel="gallery">
+                            <img class="lazy" data-original="<?php echo esc_url($galleryimg5['url']); ?>"
+                                alt="<?php echo esc_attr($galleryimg5['alt']); ?>" data-width="600" data-height="800" />
+
+                        </a>
+                    </div>
+                    <?php endif;?>
+                    <?php $galleryimg6 = get_field('galleryimg6');?>
+                    <?php if ($galleryimg6): ?>
+
+                    <div class="img">
+                        <a href="<?php echo esc_url($galleryimg6['url']); ?>" rel="gallery">
+                            <img class="lazy" data-original="<?php echo esc_url($galleryimg6['url']); ?>"
+                                alt="<?php echo esc_attr($galleryimg6['alt']); ?>" data-width="600" data-height="800" />
+
+                        </a>
+                    </div>
+                    <?php endif;?>
+
+                    <?php $galleryimg7 = get_field('galleryimg7');?>
+                    <?php if ($galleryimg7): ?>
+
+                    <div class="img">
+                        <a href="<?php echo esc_url($galleryimg7['url']); ?>" rel="gallery">
+                            <img class="lazy" data-original="<?php echo esc_url($galleryimg7['url']); ?>"
+                                alt="<?php echo esc_attr($galleryimg7['alt']); ?>" data-width="430" data-height="600" />
+
+                        </a>
+                    </div>
+                    <?php endif;?>
+
+
+
+
+
+
 
                 </div>
 
             </div>
-            <!-- End Horizontal Gallery -->
 
         </div>
-        <!-- End Wrapper -->
+        <!-- End Horizontal Gallery -->
 
     </div>
-    <!-- End Content -->
+    <!-- End Wrapper -->
 
-        <!-- Begin Footer -->
+</div>
+<!-- End Content -->
 
-<!-- End Footer -->
-
+<!-- Begin Footer -->
 
 <?php get_footer();?>
+
+<script>
+// document.getElementById("footer").style.position = "fixed";
+
+// jQuery(function($) {
+//     $("img.lazyload").lazyload();
+
+//     $("#container").imagesLoaded(function() {
+//         console.log("all images successfully loaded");
+
+//         // render();
+//         // resize()
+//         // images have loaded
+//     });
+// });
+</script>
+
+</body>
+<!-- End body -->
+
+</html>
+<!-- End html -->
